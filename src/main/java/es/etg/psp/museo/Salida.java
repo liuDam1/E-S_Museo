@@ -1,7 +1,7 @@
 package es.etg.psp.museo;
 
 public class Salida implements Runnable {
-    private Sala sala;
+    private final Sala sala;
 
     public Salida(Sala sala, int personasASalir) {
         this.sala = sala;
@@ -10,7 +10,5 @@ public class Salida implements Runnable {
     @Override
     public void run() {
         sala.decrementar();
-        
     }
-    
 }

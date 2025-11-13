@@ -1,18 +1,16 @@
 package es.etg.psp.museo;
 
+import lombok.Getter;
+
+@Getter
 public class Sala {
-    private int persona = 100 ;
- 
+    private int personas = 100;
     
-
-    public Sala() {
-    }
-
     public void incrementar() {
-        persona++;
+        personas++;
     }
 
     public void decrementar() {
-        persona--;
-    } 
+        personas--;
+    }
 }
