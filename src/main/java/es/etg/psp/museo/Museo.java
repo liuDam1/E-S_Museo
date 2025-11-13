@@ -1,6 +1,8 @@
 package es.etg.psp.museo;
 
 public class Museo {
+    private static final String MSG_TOTAL_PERSONAS = "Visitantes finales en la sala: ";
+    private static final int TIEMPO_ESPERA = 2000;
     public static void main(String[] args) throws InterruptedException {
         Sala sala = new Sala();
 
@@ -14,6 +16,7 @@ public class Museo {
             salida.start();
         }
         
-        System.out.println("Visitantes finales en la sala: " + sala.getPersonas());
+        Thread.sleep(TIEMPO_ESPERA);
+        System.out.println(MSG_TOTAL_PERSONAS + sala.getPersonas());
     }
 }

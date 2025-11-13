@@ -6,11 +6,11 @@ import lombok.Getter;
 public class Sala {
     private int personas = 100;
     
-    public void incrementar() {
+    public synchronized void incrementar() {
         personas++;
     }
 
-    public void decrementar() {
+    public synchronized void decrementar() {
         personas--;
     }
 }
